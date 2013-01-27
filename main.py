@@ -18,10 +18,12 @@ def main():
         TOKEN = get_token(APP_ID, SETTINGS, REDIRECT_URI, DISPLAY)
     else:
         vk = vkontakte.API(token=TOKEN)
+        # http://vk.com/developers.php?oid=-1&p=messages.getDialogs
         uid = input()
         messages = vk.messages.getHistory(uid=uid, count='200')
         for elem in range(messages[0], 1, -1):
             msg = messages[elem]['body'].replace('<br>', '\n')
             print(msg)
 
-main()
+if __name__ == 'main':
+    main()
