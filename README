@@ -1,2 +1,2 @@
 Application for exporting some kinds of information from the largest Russian social network VK.com.
-Python3.2>= and https://github.com/pashazz/vkontakte are requested.
+Python3.2>= and https://github.com/pashazz/vkontakte are required.
